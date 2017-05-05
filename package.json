@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "concurrently --kill-others \"npm run start-api\" \"npm run start-server\" \"npm run webpack-dev-server\"",
+    "start-api": "cross-env NODE_ENV=development babel-node ./bin/api.js",
+    "start-server": "cross-env NODE_ENV=development babel-node ./bin/server.js",
+    "webpack-dev-server": "cross-env NODE_ENV=development babel-node ./bin/webpack-dev-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,7 +20,8 @@
     "url": "https://github.com/steeeeee/react-redux-training/issues"
   },
   "homepage": "https://github.com/steeeeee/react-redux-training#readme",
-  "devDependencies": {
+  "devDependencies": {    
+    "cross-env": "^4.0.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-config-airbnb-base": "^11.1.3",
