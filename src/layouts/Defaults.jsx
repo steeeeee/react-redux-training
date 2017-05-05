@@ -1,4 +1,6 @@
-/* eslint react/prefer-stateless-function: 0, react/no-danger: 0, react/forbid-prop-types: 0 */
+/* eslint react/prefer-stateless-function: 0,
+   react/no-danger: 0,
+   react/forbid-prop-types: 0 */
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
