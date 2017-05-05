@@ -5,7 +5,7 @@ import webpack from 'webpack';
 
 const { host, port, webpackPort } = require('../config/config.env');
 
-const webpackConfig = {};
+const webpackConfig = require('../webpack/config.dev');
 
 const compiler = webpack(webpackConfig);
 
